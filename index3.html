@@ -23,7 +23,7 @@
         <script type="text/javascript">
             $.getJSON('js/data.json', function(data) {
                 var template = $('#feedtpl').html();
-                var html = Mustache.to_html(templ, data);
+                var html = Mustache.to_html(template, data);
                 $("#infowrap").html(html);
             });
         </script>
