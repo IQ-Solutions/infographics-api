@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Mustache.js Method</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="infowrap"></div>
+        </div>
+
+        <script id="feedtpl" type="text/template">
+            {{#infographics}}
+            <div class="divwrap">
+                <h2><a href="{{path}}">{{title}}</a></h2>
+                <p>{{field_teaser}} <a href="{{path}}">Read more &raquo;</a></p>
+            </div>
+            {{/infographics}}
+        </script>
+
+        <script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+        <script type="text/javascript" src="js/mustache/mustache.js" ></script>
+
+        <script type="text/javascript">
+            $.getJSON('js/data.json', function(data) {
+                var template = $('#feedtpl').html();
+                var html = Mustache.to_html(templ, data);
+                $("#infowrap").html(html);
+            });
+        </script>
+    </body>
+</html>

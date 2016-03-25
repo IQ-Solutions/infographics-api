@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Mustache.js Inline Method</title>
+        <script type="text/javascript" src="js/jquery-2.2.2.min.js" ></script>
+        <script type="text/javascript" src="js/mustache/mustache.js" ></script>
+        <script>
+            $(document).ready(function(){
+                var view = {
+                    name : "Joe",
+                    occupation : "Web Developer"
+                };
+
+                $("#templates").load("templates/feed-output.html #template1",function(){
+                    var template = document.getElementById('template1').innerHTML;
+                    var output = Mustache.render(template, view);
+                    $("#person").html(output);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="person"></p>
+        <div id="templates" style="display: none;"></div>
+    </body>
+</html>
