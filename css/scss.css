@@ -865,7 +865,7 @@ body {
   .row:last-child {
     border-bottom: 0px solid; }
   .row .one-third.column img {
-    width: auto;
+    width: 100%;
     max-width: 100%; }
 
 /*# sourceMappingURL=scss.css.map */
