@@ -30,7 +30,7 @@
 <script type="text/javascript" src="js/mustache/mustache.js" ></script>
 
 <script type="text/javascript">
-    $.getJSON('https://www.drugabuse.gov/api/rss/infographics-json', function(data) {
+    $.getJSON('js/data.json', function(data) {
         var template = $('#infographicTpl').html();
         var html = Mustache.to_html(template, data);
         $("#infowrap").html(html);
