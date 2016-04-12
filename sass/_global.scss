@@ -1,19 +1,78 @@
 body {
+  background:$dark-bg;
+  color:$grey;
   font-family:$body-font;
+  font-size:1.7em;
+  margin:1em;
 }
 
-.row {
-  border-bottom:2px solid #c0c0c0;
-  margin:1em auto;
+h1, h2, h3, h4, h5, h6 {
+  color:$accent-1;
+  font-family:$secondary-font;
+  font-weight:bold;
 
-  &:last-child {
-    border-bottom:0px solid;
+  a {
+    text-decoration:none;
   }
+}
 
-  .one-third.column {
-    img {
-      width: 100%;
-      max-width: 100%;
+h1 {
+  text-align:center;
+}
+
+h2 {
+  font-size:1.8em;
+}
+
+a, a:visited, a:active, a:link, a:hover {
+  color:$accent-2;
+}
+
+/* Containing Div */
+.container {
+  background:$white;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  padding:1em;
+
+  /* Infographics Row */
+  .row {
+    background:$light-bg;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    margin:1.5em auto;
+    padding:1em;
+
+    .one-third.column {
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
     }
+  }
+}
+
+a.button {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#436b38+1,7baf5d+49,64974f+51,b3e89d+100 */
+  background: #436b38; /* Old browsers */
+  background: -moz-linear-gradient(top,  #436b38 1%, #7baf5d 49%, #64974f 51%, #b3e89d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #436b38 1%,#7baf5d 49%,#64974f 51%,#b3e89d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #436b38 1%,#7baf5d 49%,#64974f 51%,#b3e89d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#436b38', endColorstr='#b3e89d',GradientType=0 ); /* IE6-9 */
+  border:1px solid #64974f;
+  color:#fff!important;
+  font-weight:bold;
+  font-size:1.2em;
+
+  &:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9b6c20+1,dba73f+49,b59130+51,ffd787+100 */
+    background: #9b6c20; /* Old browsers */
+    background: -moz-linear-gradient(top,  #9b6c20 1%, #dba73f 49%, #b59130 51%, #ffd787 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #9b6c20 1%,#dba73f 49%,#b59130 51%,#ffd787 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #9b6c20 1%,#dba73f 49%,#b59130 51%,#ffd787 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b6c20', endColorstr='#ffd787',GradientType=0 ); /* IE6-9 */
+    color:#fff;
   }
 }

@@ -11,6 +11,8 @@
 
     <h1>Infographics Feed from NIDA</h1>
 
+    <p>Want the latest infographics from the National Institute of Drug Abuse? You can access our API on <a href="https://github.com/IQ-Solutions/infographics-api">GitHub</a> and customize it to your needs.</a></p>
+
     <div id="infowrap"></div>
 </div>
 
@@ -19,7 +21,9 @@
     <div class="row">
         <div class="two-thirds column">
             <h2><a href="{{path}}">{{title}}</a></h2>
-            <p>{{field_teaser}} <a href="{{path}}">Read more &raquo;</a></p>
+            <p>{{field_teaser}}</p>
+
+            <a href="{{path}}" class="button">View Online</a> <a href="{{field_pdf}}" class="button">Download PDF</a>
         </div>
         <div class="one-third column"><img src="{{field_stats_image_1.src}}" alt="{{field_stats_image.alt}}" /></div>
     </div>
@@ -30,7 +34,7 @@
 <script type="text/javascript" src="js/mustache/mustache.js" ></script>
 
 <script type="text/javascript">
-    $.getJSON('js/data.json', function(data) {
+    $.getJSON('https://www.drugabuse.gov/api/rss/infographics-json', function(data) {
         var template = $('#infographicTpl').html();
         var html = Mustache.to_html(template, data);
         $("#infowrap").html(html);
